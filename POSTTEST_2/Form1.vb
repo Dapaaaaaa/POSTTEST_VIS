@@ -27,7 +27,7 @@
     Public Sub hapusBuku(ByVal judul As String)
 
         Dim index As Integer = cariBuku(judul)
-        MsgBox(index)
+
         If index <> -1 Then
             For i = index To jumlahBuku - 2
                 judulBuku(i) = judulBuku(i + 1)
@@ -57,7 +57,4 @@
         tbGenreBuku.Clear()
     End Sub
 
-    Private Sub listBuku_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listBuku.SelectedIndexChanged
-
-    End Sub
 End Class
