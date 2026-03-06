@@ -10,7 +10,8 @@
         If Double.TryParse(tbIPS.Text, ips) Then
 
             If ips < 0 Or ips > 4 Then
-                MessageBox.Show("Masukkan angka IPS antara 0 dan 4!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Masukkan angka IP Semester antara 0 dan 4!", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 tbIPS.Clear()
                 tbIPS.Focus()
                 Exit Sub
@@ -37,8 +38,6 @@
                 tbIPS.Clear()
                 tbIPS.Focus()
 
-            Else
-                MessageBox.Show("Masukkan angka IPS yang valid!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 
