@@ -8,7 +8,6 @@
         lblIdValue.Text = id
         lblDivisiValue.Text = divisi
         lblKontakValue.Text = kontak
-        lblMinatValue.Text = minat
         pbHasil.Image = foto
 
     End Sub

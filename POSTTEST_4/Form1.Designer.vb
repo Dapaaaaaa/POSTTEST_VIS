@@ -518,9 +518,12 @@ Partial Class Form1
         ' 
         ' pbProfil
         ' 
+        pbProfil.Image = CType(resources.GetObject("pbProfil.Image"), Image)
+        pbProfil.InitialImage = Nothing
         pbProfil.Location = New Point(6, 6)
         pbProfil.Name = "pbProfil"
         pbProfil.Size = New Size(125, 180)
+        pbProfil.SizeMode = PictureBoxSizeMode.Zoom
         pbProfil.TabIndex = 0
         pbProfil.TabStop = False
         ' 

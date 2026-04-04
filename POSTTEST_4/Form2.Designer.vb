@@ -166,7 +166,7 @@ Partial Class Form2
         lblIdValue.BackColor = Color.Transparent
         lblIdValue.Font = New Font("Segoe UI", 12F)
         lblIdValue.ForeColor = Color.White
-        lblIdValue.Location = New Point(101, 232)
+        lblIdValue.Location = New Point(101, 230)
         lblIdValue.Name = "lblIdValue"
         lblIdValue.Size = New Size(83, 28)
         lblIdValue.TabIndex = 12
@@ -178,7 +178,7 @@ Partial Class Form2
         lblDivisiValue.BackColor = Color.Transparent
         lblDivisiValue.Font = New Font("Segoe UI", 12F)
         lblDivisiValue.ForeColor = Color.White
-        lblDivisiValue.Location = New Point(101, 267)
+        lblDivisiValue.Location = New Point(101, 265)
         lblDivisiValue.Name = "lblDivisiValue"
         lblDivisiValue.Size = New Size(111, 28)
         lblDivisiValue.TabIndex = 13
@@ -190,7 +190,7 @@ Partial Class Form2
         lblNamaValue.BackColor = Color.Transparent
         lblNamaValue.Font = New Font("Segoe UI", 12F)
         lblNamaValue.ForeColor = Color.White
-        lblNamaValue.Location = New Point(101, 307)
+        lblNamaValue.Location = New Point(101, 305)
         lblNamaValue.Name = "lblNamaValue"
         lblNamaValue.Size = New Size(116, 28)
         lblNamaValue.TabIndex = 14
@@ -202,7 +202,7 @@ Partial Class Form2
         lblKontakValue.BackColor = Color.Transparent
         lblKontakValue.Font = New Font("Segoe UI", 12F)
         lblKontakValue.ForeColor = Color.White
-        lblKontakValue.Location = New Point(101, 346)
+        lblKontakValue.Location = New Point(101, 344)
         lblKontakValue.Name = "lblKontakValue"
         lblKontakValue.Size = New Size(126, 28)
         lblKontakValue.TabIndex = 15
