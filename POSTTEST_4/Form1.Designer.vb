@@ -23,13 +23,13 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         MenuStrip1 = New MenuStrip()
         InputDataToolStripMenuItem = New ToolStripMenuItem()
         LihatKartuToolStripMenuItem = New ToolStripMenuItem()
         SimpanDataToolStripMenuItem = New ToolStripMenuItem()
         BukaDataToolStripMenuItem = New ToolStripMenuItem()
         KeluarToolStripMenuItem = New ToolStripMenuItem()
-        lblJudul = New Label()
         pbLogo = New PictureBox()
         TabControl1 = New TabControl()
         tpDataUtama = New TabPage()
@@ -72,6 +72,7 @@ Partial Class Form1
         btnCetak = New Button()
         sfdSimpan = New SaveFileDialog()
         ErrorProvider1 = New ErrorProvider(components)
+        lblJudul = New Label()
         MenuStrip1.SuspendLayout()
         CType(pbLogo, ComponentModel.ISupportInitialize).BeginInit()
         TabControl1.SuspendLayout()
@@ -124,21 +125,13 @@ Partial Class Form1
         KeluarToolStripMenuItem.Size = New Size(65, 24)
         KeluarToolStripMenuItem.Text = "Keluar"
         ' 
-        ' lblJudul
-        ' 
-        lblJudul.AutoSize = True
-        lblJudul.Font = New Font("Segoe UI", 14.0F)
-        lblJudul.Location = New Point(12, 42)
-        lblJudul.Name = "lblJudul"
-        lblJudul.Size = New Size(181, 32)
-        lblJudul.TabIndex = 1
-        lblJudul.Text = "Komunitas Web"
-        ' 
         ' pbLogo
         ' 
+        pbLogo.Image = CType(resources.GetObject("pbLogo.Image"), Image)
         pbLogo.Location = New Point(12, 77)
         pbLogo.Name = "pbLogo"
         pbLogo.Size = New Size(190, 296)
+        pbLogo.SizeMode = PictureBoxSizeMode.StretchImage
         pbLogo.TabIndex = 2
         pbLogo.TabStop = False
         ' 
@@ -553,9 +546,19 @@ Partial Class Form1
         ErrorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink
         ErrorProvider1.ContainerControl = Me
         ' 
+        ' lblJudul
+        ' 
+        lblJudul.AutoSize = True
+        lblJudul.Font = New Font("Segoe UI", 14F)
+        lblJudul.Location = New Point(12, 42)
+        lblJudul.Name = "lblJudul"
+        lblJudul.Size = New Size(181, 32)
+        lblJudul.TabIndex = 1
+        lblJudul.Text = "Komunitas Web"
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(735, 387)
         Controls.Add(btnCetak)
@@ -591,7 +594,6 @@ Partial Class Form1
     Friend WithEvents SimpanDataToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BukaDataToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents KeluarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents lblJudul As Label
     Friend WithEvents pbLogo As PictureBox
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents tpDataUtama As TabPage
@@ -634,5 +636,6 @@ Partial Class Form1
     Friend WithEvents btnCetak As Button
     Friend WithEvents sfdSimpan As SaveFileDialog
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents lblJudul As Label
 
 End Class

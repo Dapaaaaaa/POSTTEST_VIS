@@ -4,11 +4,11 @@
     Public Sub TampilkanData(nama As String, id As String, divisi As String,
                             kontak As String, minat As String, foto As Image)
 
-        lblNama.Text = "Nama: " & nama
-        lblId.Text = "ID: " & id
-        lblDivisi.Text = "Divisi: " & divisi
-        lblKontak.Text = "Kontak: " & kontak
-        lblMinat.Text = "Minat: " & minat
+        lblNamaValue.Text = nama
+        lblIdValue.Text = id
+        lblDivisiValue.Text = divisi
+        lblKontakValue.Text = kontak
+        lblMinatValue.Text = minat
         pbHasil.Image = foto
 
     End Sub
