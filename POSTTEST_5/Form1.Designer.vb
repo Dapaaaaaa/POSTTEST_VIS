@@ -49,82 +49,88 @@ Partial Class Form1
         ' 
         txtSearch.Location = New Point(145, 46)
         txtSearch.Name = "txtSearch"
-        txtSearch.Size = New Size(125, 27)
+        txtSearch.PlaceholderText = "Masukan Data Yang Mau Dicari"
+        txtSearch.Size = New Size(335, 27)
         txtSearch.TabIndex = 0
         ' 
         ' txtKode
         ' 
         txtKode.Location = New Point(145, 110)
         txtKode.Name = "txtKode"
-        txtKode.Size = New Size(125, 27)
+        txtKode.PlaceholderText = "Masukan Kode"
+        txtKode.Size = New Size(238, 27)
         txtKode.TabIndex = 1
         ' 
         ' txtNama
         ' 
         txtNama.Location = New Point(145, 174)
         txtNama.Name = "txtNama"
-        txtNama.Size = New Size(125, 27)
+        txtNama.PlaceholderText = "Masukan Nama"
+        txtNama.Size = New Size(238, 27)
         txtNama.TabIndex = 2
         ' 
         ' txtHarga
         ' 
         txtHarga.Location = New Point(145, 238)
         txtHarga.Name = "txtHarga"
-        txtHarga.Size = New Size(125, 27)
+        txtHarga.PlaceholderText = "Masukan Harga"
+        txtHarga.Size = New Size(238, 27)
         txtHarga.TabIndex = 3
         ' 
         ' txtStok
         ' 
         txtStok.Location = New Point(145, 302)
         txtStok.Name = "txtStok"
-        txtStok.Size = New Size(125, 27)
+        txtStok.PlaceholderText = "Masukan Stok"
+        txtStok.Size = New Size(238, 27)
         txtStok.TabIndex = 4
         ' 
         ' txtDeskripsi
         ' 
         txtDeskripsi.Location = New Point(145, 366)
         txtDeskripsi.Name = "txtDeskripsi"
-        txtDeskripsi.Size = New Size(125, 27)
+        txtDeskripsi.PlaceholderText = "Masukan Deskripsi"
+        txtDeskripsi.Size = New Size(238, 27)
         txtDeskripsi.TabIndex = 5
         ' 
         ' cmbFilter
         ' 
         cmbFilter.FormattingEnabled = True
-        cmbFilter.Location = New Point(619, 42)
+        cmbFilter.Location = New Point(740, 46)
         cmbFilter.Name = "cmbFilter"
-        cmbFilter.Size = New Size(151, 28)
+        cmbFilter.Size = New Size(225, 28)
         cmbFilter.TabIndex = 6
         ' 
         ' cmbKategori
         ' 
         cmbKategori.FormattingEnabled = True
-        cmbKategori.Location = New Point(462, 42)
+        cmbKategori.Location = New Point(496, 46)
         cmbKategori.Name = "cmbKategori"
-        cmbKategori.Size = New Size(151, 28)
+        cmbKategori.Size = New Size(225, 28)
         cmbKategori.TabIndex = 7
         ' 
         ' dgvMenu
         ' 
         dgvMenu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvMenu.Location = New Point(462, 76)
+        dgvMenu.Location = New Point(399, 80)
         dgvMenu.Name = "dgvMenu"
         dgvMenu.RowHeadersWidth = 51
-        dgvMenu.Size = New Size(308, 321)
+        dgvMenu.Size = New Size(566, 317)
         dgvMenu.TabIndex = 8
         ' 
         ' lblStatus
         ' 
         lblStatus.AutoSize = True
         lblStatus.Font = New Font("Segoe UI", 14.0F)
-        lblStatus.Location = New Point(258, 9)
+        lblStatus.Location = New Point(269, 9)
         lblStatus.Name = "lblStatus"
-        lblStatus.Size = New Size(29, 32)
+        lblStatus.Size = New Size(268, 32)
         lblStatus.TabIndex = 9
-        lblStatus.Text = "A"
+        lblStatus.Text = "Status yang akan tampil"
         ' 
         ' btnTambah
         ' 
-        btnTambah.Location = New Point(67, 409)
+        btnTambah.Location = New Point(164, 409)
         btnTambah.Name = "btnTambah"
         btnTambah.Size = New Size(150, 29)
         btnTambah.TabIndex = 10
@@ -133,7 +139,7 @@ Partial Class Form1
         ' 
         ' btnUpdate
         ' 
-        btnUpdate.Location = New Point(233, 409)
+        btnUpdate.Location = New Point(330, 409)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.Size = New Size(150, 29)
         btnUpdate.TabIndex = 11
@@ -142,7 +148,7 @@ Partial Class Form1
         ' 
         ' btnHapus
         ' 
-        btnHapus.Location = New Point(399, 409)
+        btnHapus.Location = New Point(496, 409)
         btnHapus.Name = "btnHapus"
         btnHapus.Size = New Size(150, 29)
         btnHapus.TabIndex = 12
@@ -151,7 +157,7 @@ Partial Class Form1
         ' 
         ' btnBersihkan
         ' 
-        btnBersihkan.Location = New Point(565, 409)
+        btnBersihkan.Location = New Point(662, 409)
         btnBersihkan.Name = "btnBersihkan"
         btnBersihkan.Size = New Size(150, 29)
         btnBersihkan.TabIndex = 13
@@ -222,7 +228,7 @@ Partial Class Form1
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(782, 450)
+        ClientSize = New Size(977, 450)
         Controls.Add(Label6)
         Controls.Add(Label5)
         Controls.Add(Label4)

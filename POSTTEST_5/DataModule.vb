@@ -3,7 +3,7 @@ Imports System.Data
 
 Module DataModule
 
-    ' ─── READ ALL ───────────────────────────────────────────────────────────────
+    ' Baca data dari MySql dan kembalikan sebagai DataTable
 
     Public Function GetAllMenu() As DataTable
         Dim dt As New DataTable()
@@ -24,7 +24,7 @@ Module DataModule
         Return dt
     End Function
 
-    ' ─── SEARCH ─────────────────────────────────────────────────────────────────
+    ' Cari data berdasarkan keyword dan kategori, kembalikan sebagai DataTable
 
     Public Function SearchMenu(keyword As String, kategori_menu As String) As DataTable
         Dim dt As New DataTable()
@@ -56,7 +56,7 @@ Module DataModule
         Return dt
     End Function
 
-    ' ─── GET BY KODE ────────────────────────────────────────────────────────────
+    ' Get data menu berdasarkan kode, kembalikan sebagai DataTable (biasanya hanya 1 baris)
 
     Public Function GetMenuByKode(kode As String) As DataTable
         Dim dt As New DataTable()
@@ -78,7 +78,7 @@ Module DataModule
         Return dt
     End Function
 
-    ' ─── CEK KODE SUDAH ADA ─────────────────────────────────────────────────────
+    ' Cek apakah kode menu sudah ada di database, kembalikan true jika sudah ada, false jika belum
 
     Public Function KodeSudahAda(kode As String) As Boolean
         Try
@@ -99,7 +99,7 @@ Module DataModule
         End Try
     End Function
 
-    ' ─── CREATE ─────────────────────────────────────────────────────────────────
+    ' Buat data baru ke database, kembalikan true jika berhasil, false jika gagal
 
     Public Function SimpanMenu(kode As String, nama_menu As String, kategori_menu As String,
                                 harga_menu As Decimal, stok_menu As Integer, deskripsi_menu As String) As Boolean
@@ -128,7 +128,7 @@ Module DataModule
         End Try
     End Function
 
-    ' ─── UPDATE ─────────────────────────────────────────────────────────────────
+    ' Perbarui data menu di database berdasarkan kode, kembalikan true jika berhasil, false jika gagal
 
     Public Function UbahMenu(kode As String, nama_menu As String, kategori_menu As String,
                               harga_menu As Decimal, stok_menu As Integer, deskripsi_menu As String) As Boolean
@@ -157,7 +157,7 @@ Module DataModule
         End Try
     End Function
 
-    ' ─── DELETE ─────────────────────────────────────────────────────────────────
+    ' Hapus data menu dari database berdasarkan kode, kembalikan true jika berhasil, false jika gagal`
 
     Public Function HapusMenu(kode As String) As Boolean
         Try

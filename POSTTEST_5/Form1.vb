@@ -49,7 +49,7 @@
         txtKode.Text = selectedKode
         txtNama.Text = row.Cells("nama_menu").Value.ToString()
         cmbKategori.Text = row.Cells("kategori_menu").Value.ToString()
-        txtHarga.Text = row.Cells("harga_menu").Value.ToString()
+        txtHarga.Text = Convert.ToDecimal(row.Cells("Harga_menu").Value).ToString("0")
         txtStok.Text = row.Cells("stok_menu").Value.ToString()
         txtDeskripsi.Text = row.Cells("deskripsi_menu").Value.ToString()
 
@@ -140,4 +140,7 @@
         txtKode.Enabled = True
     End Sub
 
+    Private Sub cmbKategori_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbKategori.SelectedIndexChanged
+
+    End Sub
 End Class
