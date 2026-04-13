@@ -122,7 +122,7 @@ Partial Class Form1
         ' 
         lblStatus.AutoSize = True
         lblStatus.Font = New Font("Segoe UI", 14.0F)
-        lblStatus.Location = New Point(269, 9)
+        lblStatus.Location = New Point(354, 9)
         lblStatus.Name = "lblStatus"
         lblStatus.Size = New Size(268, 32)
         lblStatus.TabIndex = 9

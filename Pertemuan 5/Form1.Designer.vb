@@ -35,6 +35,7 @@ Partial Class Form1
         btnHapus = New Button()
         btnBatal = New Button()
         ErrorProvider1 = New ErrorProvider(components)
+        btnPindah = New Button()
         CType(dgvJenis, ComponentModel.ISupportInitialize).BeginInit()
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -139,11 +140,21 @@ Partial Class Form1
         ' 
         ErrorProvider1.ContainerControl = Me
         ' 
+        ' btnPindah
+        ' 
+        btnPindah.Location = New Point(559, 209)
+        btnPindah.Name = "btnPindah"
+        btnPindah.Size = New Size(94, 29)
+        btnPindah.TabIndex = 11
+        btnPindah.Text = "Pindah"
+        btnPindah.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(btnPindah)
         Controls.Add(btnBatal)
         Controls.Add(btnHapus)
         Controls.Add(btnUbah)
@@ -175,5 +186,6 @@ Partial Class Form1
     Friend WithEvents btnHapus As Button
     Friend WithEvents btnBatal As Button
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents btnPindah As Button
 
 End Class

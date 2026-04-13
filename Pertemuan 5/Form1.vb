@@ -18,41 +18,41 @@
         If Not ValidasiJenisBuku(ErrorProvider1, txtKodeJenis, txtJenis) Then Exit Sub
 
         Dim kode As String = txtKodeJenis.Text.Trim()
-            Dim namaJenis As String = txtJenis.Text.Trim()
-            If KodeSudahAda(kode) Then
-                MessageBox.Show("Kode Jenis sudah terdaftar",
+        Dim namaJenis As String = txtJenis.Text.Trim()
+        If KodeSudahAda(kode) Then
+            MessageBox.Show("Kode Jenis sudah terdaftar",
 "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
-                txtKodeJenis.Focus()
-                Exit Sub
-            End If
-            If SimpanJenis(kode, namaJenis) Then
+            txtKodeJenis.Focus()
+            Exit Sub
+        End If
+        If SimpanJenis(kode, namaJenis) Then
             MessageBox.Show("Data berhasil disimpan", "Informasi",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             TampilData()
-                Kosong()
-            End If
-            End Sub
+            Kosong()
+        End If
+    End Sub
     Private Sub btnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
 
         ErrorProvider1.Clear()
         If Not ValidasiJenisBuku(ErrorProvider1, txtKodeJenis, txtJenis) Then Exit Sub
 
         Dim kode As String = txtKodeJenis.Text.Trim()
-            Dim namaJenis As String = txtJenis.Text.Trim()
-            If UbahJenis(kode, namaJenis) Then
+        Dim namaJenis As String = txtJenis.Text.Trim()
+        If UbahJenis(kode, namaJenis) Then
             MessageBox.Show("Data berhasil diubah", "Informasi",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             TampilData()
-                Kosong()
-            Else
+            Kosong()
+        Else
             MessageBox.Show("Data tidak ditemukan", "Informasi",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
         End If
-End Sub
+    End Sub
     Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
 
         If txtKodeJenis.Text.Trim() = "" Then
@@ -121,5 +121,9 @@ dt.Rows(0)("kodeJenis").ToString()
         Else
             dgvJenis.DataSource = SearchJenis(txtSearch.Text.Trim())
         End If
+    End Sub
+
+    Private Sub btnPindah_Click(sender As Object, e As EventArgs) Handles btnPindah.Click
+        Form2.Show()
     End Sub
 End Class
