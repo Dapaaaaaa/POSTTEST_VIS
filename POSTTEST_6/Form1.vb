@@ -145,6 +145,6 @@
     End Sub
 
     Private Sub btnKasir_Click(sender As Object, e As EventArgs) Handles btnKasir.Click
-
+        Form2.Show()
     End Sub
 End Class

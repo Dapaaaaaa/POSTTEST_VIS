@@ -212,36 +212,14 @@ Module DataModule
         End Try
     End Function
 
-    Public Function SimpanPesanan(id_menu As String, jumlah As Integer, total_harga As Decimal) As Boolean
-        Try
-            Dim query As String =
-                "INSERT INTO tb_pesanan (id_menu, jumlah, total_harga)
-                 VALUES (@id_menu, @jumlah, @total_harga)"
-            Using conn As MySqlConnection = GetConnection()
-                conn.Open()
-                Using cmd As New MySqlCommand(query, conn)
-                    cmd.Parameters.AddWithValue("@id_menu", id_menu)
-                    cmd.Parameters.AddWithValue("@jumlah", jumlah)
-                    cmd.Parameters.AddWithValue("@total_harga", total_harga)
-                    cmd.ExecuteNonQuery()
-                End Using
-            End Using
-            Return True
-        Catch ex As Exception
-            MessageBox.Show("Gagal menyimpan data: " & ex.Message,
-                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return False
-        End Try
-    End Function
-
     Public Function GetAllPesanan() As DataTable
         Dim dt As New DataTable()
         Try
             Dim query As String =
-                "SELECT p.id_pesanan, m.nama_menu, p.jumlah, p.total_harga, p.tanggal_pesanan
+                "SELECT p.id_pesanan, m.nama_menu, p.jumlah_pesan, p.total_harga, p.tgl_pesan
                  FROM tb_pesanan p
                  JOIN tb_menu m ON p.id_menu = m.id_menu
-                 ORDER BY p.tanggal_pesanan DESC"
+                 ORDER BY p.tgl_pesan DESC"
             Using conn As MySqlConnection = GetConnection()
                 Using da As New MySqlDataAdapter(query, conn)
                     da.Fill(dt)
@@ -254,16 +232,16 @@ Module DataModule
         Return dt
     End Function
 
-    Public Function simpanPesanan(id_menu As String, jumlah As Integer, total_harga As Decimal) As Boolean
+    Public Function SimpanPesanan(id_menu As String, jumlah As Integer, total_harga As Decimal) As Boolean
         Try
             Dim query As String =
-                "INSERT INTO tb_pesanan (id_menu, jumlah, total_harga)
-                 VALUES (@id_menu, @jumlah, @total_harga)"
+                "INSERT INTO tb_pesanan (id_menu, jumlah_pesan, total_harga)
+                 VALUES (@id_menu, @jumlah_pesan, @total_harga)"
             Using conn As MySqlConnection = GetConnection()
                 conn.Open()
                 Using cmd As New MySqlCommand(query, conn)
                     cmd.Parameters.AddWithValue("@id_menu", id_menu)
-                    cmd.Parameters.AddWithValue("@jumlah", jumlah)
+                    cmd.Parameters.AddWithValue("@jumlah_pesan", jumlah)
                     cmd.Parameters.AddWithValue("@total_harga", total_harga)
                     cmd.ExecuteNonQuery()
                 End Using
