@@ -143,4 +143,8 @@
     Private Sub cmbKategori_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbKategori.SelectedIndexChanged
 
     End Sub
+
+    Private Sub btnKasir_Click(sender As Object, e As EventArgs) Handles btnKasir.Click
+
+    End Sub
 End Class

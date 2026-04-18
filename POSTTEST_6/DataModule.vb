@@ -177,4 +177,103 @@ Module DataModule
         End Try
     End Function
 
+    ' Fungsi tambahan untuk Form2.vb
+    Public Function GetMenuForOrder() As DataTable
+        Dim dt As New DataTable()
+        Try
+            Dim query As String =
+                "SELECT id_menu, nama_menu FROM tb_menu WHERE stok_menu > 0 ORDER BY nama_menu ASC"
+            Using conn As MySqlConnection = GetConnection()
+                Using da As New MySqlDataAdapter(query, conn)
+                    da.Fill(dt)
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Gagal menampilkan data: " & ex.Message,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return dt
+    End Function
+
+    Public Function GetHargaMenu(kode As String) As Decimal
+        Try
+            Dim query As String = "SELECT harga_menu FROM tb_menu WHERE id_menu = @id_menu"
+            Using conn As MySqlConnection = GetConnection()
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@id_menu", kode)
+                    Return Convert.ToDecimal(cmd.ExecuteScalar())
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Gagal mengambil data: " & ex.Message,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return 0
+        End Try
+    End Function
+
+    Public Function SimpanPesanan(id_menu As String, jumlah As Integer, total_harga As Decimal) As Boolean
+        Try
+            Dim query As String =
+                "INSERT INTO tb_pesanan (id_menu, jumlah, total_harga)
+                 VALUES (@id_menu, @jumlah, @total_harga)"
+            Using conn As MySqlConnection = GetConnection()
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@id_menu", id_menu)
+                    cmd.Parameters.AddWithValue("@jumlah", jumlah)
+                    cmd.Parameters.AddWithValue("@total_harga", total_harga)
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+            Return True
+        Catch ex As Exception
+            MessageBox.Show("Gagal menyimpan data: " & ex.Message,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+    End Function
+
+    Public Function GetAllPesanan() As DataTable
+        Dim dt As New DataTable()
+        Try
+            Dim query As String =
+                "SELECT p.id_pesanan, m.nama_menu, p.jumlah, p.total_harga, p.tanggal_pesanan
+                 FROM tb_pesanan p
+                 JOIN tb_menu m ON p.id_menu = m.id_menu
+                 ORDER BY p.tanggal_pesanan DESC"
+            Using conn As MySqlConnection = GetConnection()
+                Using da As New MySqlDataAdapter(query, conn)
+                    da.Fill(dt)
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Gagal menampilkan data: " & ex.Message,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return dt
+    End Function
+
+    Public Function simpanPesanan(id_menu As String, jumlah As Integer, total_harga As Decimal) As Boolean
+        Try
+            Dim query As String =
+                "INSERT INTO tb_pesanan (id_menu, jumlah, total_harga)
+                 VALUES (@id_menu, @jumlah, @total_harga)"
+            Using conn As MySqlConnection = GetConnection()
+                conn.Open()
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@id_menu", id_menu)
+                    cmd.Parameters.AddWithValue("@jumlah", jumlah)
+                    cmd.Parameters.AddWithValue("@total_harga", total_harga)
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+            Return True
+        Catch ex As Exception
+            MessageBox.Show("Gagal menyimpan data: " & ex.Message,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+    End Function
+
 End Module

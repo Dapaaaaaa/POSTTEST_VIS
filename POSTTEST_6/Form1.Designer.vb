@@ -42,6 +42,7 @@ Partial Class Form1
         Label4 = New Label()
         Label5 = New Label()
         Label6 = New Label()
+        btnKasir = New Button()
         CType(dgvMenu, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -121,7 +122,7 @@ Partial Class Form1
         ' lblStatus
         ' 
         lblStatus.AutoSize = True
-        lblStatus.Font = New Font("Segoe UI", 14.0F)
+        lblStatus.Font = New Font("Segoe UI", 14F)
         lblStatus.Location = New Point(354, 9)
         lblStatus.Name = "lblStatus"
         lblStatus.Size = New Size(268, 32)
@@ -130,7 +131,7 @@ Partial Class Form1
         ' 
         ' btnTambah
         ' 
-        btnTambah.Location = New Point(164, 409)
+        btnTambah.Location = New Point(89, 409)
         btnTambah.Name = "btnTambah"
         btnTambah.Size = New Size(150, 29)
         btnTambah.TabIndex = 10
@@ -139,7 +140,7 @@ Partial Class Form1
         ' 
         ' btnUpdate
         ' 
-        btnUpdate.Location = New Point(330, 409)
+        btnUpdate.Location = New Point(251, 409)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.Size = New Size(150, 29)
         btnUpdate.TabIndex = 11
@@ -148,7 +149,7 @@ Partial Class Form1
         ' 
         ' btnHapus
         ' 
-        btnHapus.Location = New Point(496, 409)
+        btnHapus.Location = New Point(413, 409)
         btnHapus.Name = "btnHapus"
         btnHapus.Size = New Size(150, 29)
         btnHapus.TabIndex = 12
@@ -157,7 +158,7 @@ Partial Class Form1
         ' 
         ' btnBersihkan
         ' 
-        btnBersihkan.Location = New Point(662, 409)
+        btnBersihkan.Location = New Point(575, 409)
         btnBersihkan.Name = "btnBersihkan"
         btnBersihkan.Size = New Size(150, 29)
         btnBersihkan.TabIndex = 13
@@ -167,7 +168,7 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 11.0F)
+        Label1.Font = New Font("Segoe UI", 11F)
         Label1.Location = New Point(40, 45)
         Label1.Name = "Label1"
         Label1.Size = New Size(46, 25)
@@ -177,7 +178,7 @@ Partial Class Form1
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 11.0F)
+        Label2.Font = New Font("Segoe UI", 11F)
         Label2.Location = New Point(40, 109)
         Label2.Name = "Label2"
         Label2.Size = New Size(55, 25)
@@ -187,7 +188,7 @@ Partial Class Form1
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 11.0F)
+        Label3.Font = New Font("Segoe UI", 11F)
         Label3.Location = New Point(40, 173)
         Label3.Name = "Label3"
         Label3.Size = New Size(62, 25)
@@ -197,7 +198,7 @@ Partial Class Form1
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 11.0F)
+        Label4.Font = New Font("Segoe UI", 11F)
         Label4.Location = New Point(40, 237)
         Label4.Name = "Label4"
         Label4.Size = New Size(63, 25)
@@ -207,7 +208,7 @@ Partial Class Form1
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 11.0F)
+        Label5.Font = New Font("Segoe UI", 11F)
         Label5.Location = New Point(40, 301)
         Label5.Name = "Label5"
         Label5.Size = New Size(47, 25)
@@ -217,18 +218,28 @@ Partial Class Form1
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 11.0F)
+        Label6.Font = New Font("Segoe UI", 11F)
         Label6.Location = New Point(40, 365)
         Label6.Name = "Label6"
         Label6.Size = New Size(88, 25)
         Label6.TabIndex = 19
         Label6.Text = "Deskripsi"
         ' 
+        ' btnKasir
+        ' 
+        btnKasir.Location = New Point(737, 409)
+        btnKasir.Name = "btnKasir"
+        btnKasir.Size = New Size(150, 29)
+        btnKasir.TabIndex = 20
+        btnKasir.Text = "Menu Kasir"
+        btnKasir.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(977, 450)
+        Controls.Add(btnKasir)
         Controls.Add(Label6)
         Controls.Add(Label5)
         Controls.Add(Label4)
@@ -276,5 +287,6 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents btnKasir As Button
 
 End Class
